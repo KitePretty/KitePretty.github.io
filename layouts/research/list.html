@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div id="main-content" class="research-page" tabindex="-1">
+  <h1>Research</h1>
+  <section class="research-interests" aria-labelledby="interests-title">
+    <h2 id="interests-title">Research interests</h2>
+    {{ .Content }}
+  </section>
+  <section aria-labelledby="projects-title" class="all-projects">
+    <h2 id="projects-title">Projects</h2>
+    {{ range .Pages.ByWeight }}{{ partial "project-card.html" (dict "page" . "home" false) }}{{ end }}
+  </section>
+</div>
+{{ end }}

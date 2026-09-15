@@ -1,0 +1,7 @@
+{{ $image := resources.Get "images/organization-map.webp" }}
+<figure class="organization-map">
+  <a href="{{ $image.RelPermalink }}" target="_blank" rel="noopener" aria-label="Open the eating-disorder mutual-aid organization map at full size">
+    <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="Map of internal organizing work, digital platforms, engagement activities, and participation arrangements in an eating-disorder mutual-aid organization." loading="lazy">
+  </a>
+  <figcaption>An organization map developed with a cofounder, showing how activities, digital platforms, and participation arrangements relate to one another. <a href="{{ $image.RelPermalink }}" target="_blank" rel="noopener">View full size ↗</a></figcaption>
+</figure>

@@ -1,0 +1,49 @@
+baseURL = 'https://kitepretty.github.io/'
+languageCode = 'en-us'
+title = 'Yuting Peng'
+theme = 'barks'
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term', 'RSS']
+
+[params]
+  email = 'ytpeng@unc.edu'
+  description = 'Yuting Peng studies human–computer interaction and social computing, with a focus on care, community support, and health.'
+  [params.typography]
+    title_font = 'Bree Serif'
+    body_font = 'Source Sans 3'
+  [params.colors]
+    theme_color = '#ffe13b'
+    background_color = '#fcfbf9'
+    text_color = '#30302e'
+    link_color = '#ffe13b'
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+[imaging]
+  quality = 88
+  [imaging.exif]
+    disableDate = true
+    disableLatLong = true
+    excludeFields = '.*'
+
+[caches.images]
+  dir = ':cacheDir/images'
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'Research'
+    pageRef = '/research'
+    weight = 20
+  [[menus.main]]
+    name = 'CV'
+    url = '/files/yuting-peng-cv.pdf'
+    weight = 30
+  [[menus.main]]
+    name = 'Contact'
+    url = '/#contact'
+    weight = 40

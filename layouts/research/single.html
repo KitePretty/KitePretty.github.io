@@ -1,0 +1,17 @@
+{{ define "main" }}
+<article id="main-content" class="project-page" tabindex="-1">
+  <a class="back-link" href="{{ "research/" | relURL }}"><span aria-hidden="true">←</span> All research</a>
+  <h1>{{ .Title }}</h1>
+  <figure class="project-hero {{ .Params.slug }}">
+    {{ $image := resources.Get .Params.image }}
+    {{ $display := $image.Resize "1400x webp" }}
+    <img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ .Params.image_alt }}" fetchpriority="high">
+    {{ with .Params.image_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+  </figure>
+  <div class="project-layout">
+    <aside class="project-toc" aria-label="On this page"><p>On this page</p>{{ .TableOfContents }}</aside>
+    <div class="project-body">{{ .Content }}</div>
+  </div>
+  <div class="project-bottom"><a href="{{ "research/" | relURL }}">← All research</a><a href="#main-content">Back to top ↑</a></div>
+</article>
+{{ end }}

@@ -1,0 +1,16 @@
+{{ $page := .page }}
+{{ $summary := cond .home $page.Params.home_summary $page.Params.summary }}
+<article class="project-card">
+  <a class="project-image-link {{ $page.Params.slug }}" href="{{ $page.RelPermalink }}" tabindex="-1" aria-hidden="true">
+    {{ $image := resources.Get $page.Params.image }}
+    {{ $small := $image.Resize "600x webp" }}
+    {{ $large := $image.Resize "1000x webp" }}
+    <img src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 600w, {{ $large.RelPermalink }} 1000w" sizes="(max-width: 620px) calc(100vw - 48px), 248px" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="" loading="lazy" decoding="async">
+  </a>
+  <div class="project-card-copy">
+    <h3><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h3>
+    <p class="project-summary">{{ $summary }}</p>
+    <p class="project-role"><strong>My role:</strong> {{ $page.Params.role }}</p>
+    <a class="project-link" href="{{ $page.RelPermalink }}" aria-label="Explore {{ $page.Title }}">Explore the project <span aria-hidden="true">→</span></a>
+  </div>
+</article>

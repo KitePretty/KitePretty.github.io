@@ -1,0 +1,25 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffe13b">
+  <meta name="author" content="Yuting Peng">
+  {{ $description := .Description | default .Site.Params.description }}
+  <meta name="description" content="{{ $description }}">
+  <title>{{ if .IsHome }}Yuting Peng · HCI & Social Computing{{ else }}{{ .Title }} · Yuting Peng{{ end }}</title>
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  <meta property="og:title" content="{{ if .IsHome }}Yuting Peng{{ else }}{{ .Title }} · Yuting Peng{{ end }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:description" content="{{ $description }}">
+  {{ $image := resources.Get (.Params.image | default "images/portrait.webp") }}
+  {{ with $image }}<meta property="og:image" content="{{ (.Resize "1000x webp").Permalink }}">{{ end }}
+  <meta name="twitter:card" content="summary_large_image">
+  {{ $base := resources.Get "styles.scss" | resources.ExecuteAsTemplate "barks.scss" . | css.Sass (dict "outputStyle" "compressed") | fingerprint }}
+  <link rel="stylesheet" href="{{ $base.RelPermalink }}">
+  {{ $custom := resources.Get "css/custom.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $custom.RelPermalink }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>

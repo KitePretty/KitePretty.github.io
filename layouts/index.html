@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div id="main-content" tabindex="-1">
+  <section class="landing-page-wrapper" aria-labelledby="intro-title">
+    <div class="landing-page-content">
+      <div>
+        <h1 id="intro-title">Hi, I’m Yuting!</h1>
+        <div class="home-bio">{{ .Content }}</div>
+        <div class="intro-links"><a class="button-yellow" href="{{ "files/yuting-peng-cv.pdf" | relURL }}">Download CV <span aria-hidden="true">↗</span></a><a href="mailto:ytpeng@unc.edu">Email me <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </div>
+    <figure class="landing-page-image">
+      {{ $image := resources.Get "images/portrait.webp" }}
+      {{ $small := $image.Resize "500x webp" }}
+      <img src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 500w, {{ $image.RelPermalink }} 1000w" sizes="(max-width: 620px) 270px, 280px" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="Yuting Peng sitting beside a warm yellow wall and steps." fetchpriority="high">
+    </figure>
+  </section>
+  <section class="selected-research" aria-labelledby="selected-title">
+    <div class="section-heading"><h2 id="selected-title">Selected research</h2><a href="{{ "research/" | relURL }}">All research <span aria-hidden="true">→</span></a></div>
+    {{ range (where .Site.RegularPages "Section" "research").ByWeight }}
+      {{ if .Params.featured }}{{ partial "project-card.html" (dict "page" . "home" true) }}{{ end }}
+    {{ end }}
+  </section>
+  <section id="contact" class="contact-section" aria-labelledby="contact-title">
+    <h2 id="contact-title">Get in touch</h2>
+    <p>{{ .Site.Data.home.contact | markdownify }}</p>
+    <a class="contact-email" href="mailto:ytpeng@unc.edu">ytpeng@unc.edu <span aria-hidden="true">↗</span></a>
+  </section>
+</div>
+{{ end }}

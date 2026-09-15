@@ -1,0 +1,10 @@
+<nav aria-label="Main navigation">
+  <ul>
+    {{ range .Site.Menus.main }}
+    {{ $active := false }}
+    {{ if eq .Name "Home" }}{{ $active = $.IsHome }}{{ end }}
+    {{ if eq .Name "Research" }}{{ $active = eq $.Section "research" }}{{ end }}
+    <li><a href="{{ .URL | relURL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</nav>
