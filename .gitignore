@@ -3,3 +3,8 @@
 .hugo_build.lock
 .DS_Store
 __pycache__/
+/node_modules/
+/.wrangler/
+/.cache/
+.dev.vars*
+.env*

@@ -32,9 +32,33 @@ hugo --gc --minify
 python3 scripts/check_site.py
 ```
 
-## 发布
+## GitHub Pages 发布
 
 推送至 `main` 后，GitHub Actions 自动构建、检查本地链接并发布到 GitHub Pages。构建失败时不会发布失败版本。GitHub Pages 的 Source 设置为 GitHub Actions。
+
+## Cloudflare Workers 发布
+
+站点使用 Workers Static Assets，配置保存在 `wrangler.jsonc`。无需数据库或服务器代码，发布前自动构建 Hugo 并检查站点。依赖 Node.js 22 或更新版本、Python 3 和 Hugo extended 0.145.0。
+
+```sh
+npm ci
+npx wrangler login
+npm run deploy
+```
+
+`npm run preview:workers` 可预览 Cloudflare 的目录跳转和 404 页面。首次部署需要已登录的 Cloudflare 账户；`workers.dev` 地址由账户的子域名决定，部署完成后才能确认。
+
+若通过 Cloudflare 的 GitHub 集成自动部署，选择本仓库的 `main`，根目录为 `/`，部署命令为 `npm run deploy`（其中自动执行构建），构建变量 `HUGO_VERSION=0.145.0`。不要运行 `sync_content.py`：它只用于本地编辑主稿，仓库内的 `content/` 已是可发布的正文。
+
+`yutingpeng.com` 尚未注册，因此配置中暂不绑定该域名。注册并在同一 Cloudflare 账户中激活后，添加自定义域名：
+
+```json
+"routes": [{ "pattern": "yutingpeng.com", "custom_domain": true }]
+```
+
+届时将 `hugo.toml` 的 `baseURL` 改为 `https://yutingpeng.com/` 后重新发布，以更新搜索引擎和分享链接。也可以在构建时使用 `HUGO_BASEURL` 覆盖。GitHub Actions 仍会单独使用其自身地址构建。
+
+官方说明：[静态网站](https://developers.cloudflare.com/workers/static-assets/routing/static-site-generation/)、[自定义域名](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/)。
 
 ## 图片与文件
 

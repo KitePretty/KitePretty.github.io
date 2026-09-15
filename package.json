@@ -1,0 +1,15 @@
+{
+  "name": "yuting-peng-academic-website",
+  "private": true,
+  "scripts": {
+    "build": "hugo --cacheDir \"$PWD/.cache/hugo\" --cleanDestinationDir --minify && python3 scripts/check_site.py",
+    "preview:workers": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.132.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

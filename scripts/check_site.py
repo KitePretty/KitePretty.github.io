@@ -9,9 +9,10 @@ ROOT=Path(__file__).resolve().parents[1]/'public'
 EXPECTED=['index.html','research/index.html','research/breast-health/index.html','research/eating-disorder-mutual-aid/index.html','research/rainbow-school/index.html','research/ehr-patient-portals/index.html','research/yoga/index.html','404.html']
 class Page(HTMLParser):
     def __init__(self):
-        super().__init__(); self.urls=[]; self.ids=set(); self.h1=0
+        super().__init__(); self.urls=[]; self.ids=set(); self.h1=0; self.canonical=None
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
+        if tag=='link' and a.get('rel')=='canonical': self.canonical=a.get('href')
         if tag=='h1': self.h1+=1
         if 'id' in a: self.ids.add(a['id'])
         for key in ('href','src'):
@@ -29,12 +30,14 @@ for filename in EXPECTED:
     p=Page();p.feed(content);parsed[filename]=p
     assert p.h1==1,(filename,p.h1)
 
+site_host=urlparse(parsed['index.html'].canonical or '').netloc.lower()
+assert site_host, 'Homepage must declare its canonical URL'
 count=0
 for filename,page in parsed.items():
     for url in page.urls:
         u=urlparse(url)
         if u.scheme in ('mailto','tel','data'):continue
-        if u.netloc and u.netloc.lower()!='kitepretty.github.io':continue
+        if u.netloc and u.netloc.lower()!=site_host:continue
         if u.path:
             p=ROOT/unquote(u.path.lstrip('/')) if u.path.startswith('/') else (ROOT/filename).parent/unquote(u.path)
             if p.is_dir():p=p/'index.html'

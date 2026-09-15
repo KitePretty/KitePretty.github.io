@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "yuting-peng",
+  "compatibility_date": "2026-09-15",
+  "workers_dev": true,
+  "build": {
+    "command": "npm run build",
+    "watch_dir": ["content", "data", "assets", "layouts", "static", "hugo.toml"]
+  },
+  "assets": {
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
