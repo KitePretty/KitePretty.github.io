@@ -1,6 +1,8 @@
 # Yuting Peng — personal academic website
 
-Live site: https://kitepretty.github.io/
+Live site: https://yutingpeng.com/
+
+GitHub Pages: https://kitepretty.github.io/
 
 Cloudflare Workers: https://yuting-peng.yutingpeng2002.workers.dev/
 
@@ -58,13 +60,7 @@ npm run deploy
 
 若通过 Cloudflare 的 GitHub 集成自动部署，选择本仓库的 `main`，根目录为 `/`，部署命令为 `npm run deploy`（其中自动执行构建），构建变量 `HUGO_VERSION=0.145.0`。不要运行 `sync_content.py`：它只用于本地编辑主稿，仓库内的 `content/` 已是可发布的正文。
 
-`yutingpeng.com` 尚未注册，因此配置中暂不绑定该域名。注册并在同一 Cloudflare 账户中激活后，添加自定义域名：
-
-```json
-"routes": [{ "pattern": "yutingpeng.com", "custom_domain": true }]
-```
-
-届时将 `hugo.toml` 的 `baseURL` 改为 `https://yutingpeng.com/` 后重新发布，以更新搜索引擎和分享链接。也可以在构建时使用 `HUGO_BASEURL` 覆盖。GitHub Actions 仍会单独使用其自身地址构建。
+`yutingpeng.com` 已由本人在 Cloudflare 注册，并绑定至同一账户的 `yuting-peng` Worker。域名记录保存在 `wrangler.jsonc`，`hugo.toml` 的 `baseURL` 使用 `https://yutingpeng.com/`，用于搜索引擎、站点地图和分享链接。GitHub Pages 仍可访问，搜索引擎的正式地址统一指向 `yutingpeng.com`。
 
 官方说明：[静态网站](https://developers.cloudflare.com/workers/static-assets/routing/static-site-generation/)、[自定义域名](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/)。
 
