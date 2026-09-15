@@ -2,6 +2,8 @@
 
 Live site: https://kitepretty.github.io/
 
+Cloudflare Workers: https://yuting-peng.yutingpeng2002.workers.dev/
+
 A Hugo website based on [Barks](https://github.com/timothygebhard/barks), with a bright yellow accent, a photo on the right of the introduction, a research index, and five project pages. The theme is vendored at commit `99163e05a14047757f95144edcaca492a763157c`; its MIT license is retained in `themes/barks/LICENSE`.
 
 ## 修改文字
@@ -38,7 +40,13 @@ python3 scripts/check_site.py
 
 ## Cloudflare Workers 发布
 
+2026-09-15 已通过 Cloudflare 控制台上传并发布；项目名为 `yuting-peng`。已检查 33 个线上文件与本地一致、项目地址跳转及自定义 404。当前为手动上传，尚未连接 Cloudflare 自动构建；推送 GitHub 只会自动更新 GitHub Pages。
+
+日常更新可先运行 `npm run build`，再在 Cloudflare 项目的 **New deployment** 上传 `public/` 内全部内容组成的 ZIP，保持目录结构，ZIP 根目录应直接包含 `index.html`。HTML handling 选择 `auto-trailing-slash`，Not found handling 选择 `404-page`。
+
 站点使用 Workers Static Assets，配置保存在 `wrangler.jsonc`。无需数据库或服务器代码，发布前自动构建 Hugo 并检查站点。依赖 Node.js 22 或更新版本、Python 3 和 Hugo extended 0.145.0。
+
+下列命令是未来选择命令行部署时的替代方法，需要另行授权本地登录；本轮未创建本地账户令牌。
 
 ```sh
 npm ci
