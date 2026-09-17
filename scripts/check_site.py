@@ -6,7 +6,7 @@ from urllib.parse import urlparse, unquote
 import re
 
 ROOT=Path(__file__).resolve().parents[1]/'public'
-EXPECTED=['index.html','research/index.html','research/breast-health/index.html','research/eating-disorder-mutual-aid/index.html','research/rainbow-school/index.html','research/ehr-patient-portals/index.html','research/yoga/index.html','404.html']
+EXPECTED=['index.html','research/index.html','research/breast-health/index.html','research/eating-disorder-mutual-aid/index.html','research/rainbow-school/index.html','research/accessible-bar/index.html','research/ehr-patient-portals/index.html','research/yoga/index.html','404.html']
 class Page(HTMLParser):
     def __init__(self):
         super().__init__(); self.urls=[]; self.ids=set(); self.h1=0; self.canonical=None
@@ -26,7 +26,7 @@ for filename in EXPECTED:
     path=ROOT/filename
     assert path.is_file(),f'Missing {filename}'
     content=path.read_text()
-    assert not re.search(r'/Users/|localhost:|127\.0\.0\.1|内部|待补|临时文案',content),f'Internal content in {filename}'
+    assert not re.search(r'/Users/|localhost:|127\.0\.0\.1|[\u4e00-\u9fff]|My role|my-role',content),f'Internal content or removed role in {filename}'
     p=Page();p.feed(content);parsed[filename]=p
     assert p.h1==1,(filename,p.h1)
 
@@ -48,7 +48,10 @@ for filename,page in parsed.items():
         count+=1
 for filename in EXPECTED[2:-1]:
     text=(ROOT/filename).read_text()
-    assert all(f'id={x}' in text or f'id="{x}"' in text for x in ['overview','my-role','approach','findings','manuscript']),filename
+    assert all(f'id={x}' in text or f'id="{x}"' in text for x in ['overview','approach','findings','manuscript']),filename
+assert (ROOT/'index.html').read_text().count('<strong>Method:</strong>') == 3
+assert (ROOT/'research/index.html').read_text().count('<strong>Method:</strong>') == 6
+assert 'AI for Health' in (ROOT/'index.html').read_text()
 assert 'marginalized and vulnerable populations' in (ROOT/'index.html').read_text()
 assert b'%PDF-'==(ROOT/'files/yuting-peng-cv.pdf').read_bytes()[:5]
 assert not any(p.suffix in ('.docx','.tex') for p in ROOT.rglob('*'))

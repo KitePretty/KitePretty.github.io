@@ -4,7 +4,7 @@
   <h1>{{ .Title }}</h1>
   <figure class="project-hero {{ .Params.slug }}">
     {{ $image := resources.Get .Params.image }}
-    {{ $display := $image.Resize "1400x webp" }}
+    {{ $display := $image.Resize (printf "%dx webp" (int (math.Min 1400 $image.Width))) }}
     <img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ .Params.image_alt }}" fetchpriority="high">
     {{ with .Params.image_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
   </figure>

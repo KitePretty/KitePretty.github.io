@@ -3,14 +3,14 @@
 <article class="project-card">
   <a class="project-image-link {{ $page.Params.slug }}" href="{{ $page.RelPermalink }}" tabindex="-1" aria-hidden="true">
     {{ $image := resources.Get $page.Params.image }}
-    {{ $small := $image.Resize "600x webp" }}
-    {{ $large := $image.Resize "1000x webp" }}
-    <img src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 600w, {{ $large.RelPermalink }} 1000w" sizes="(max-width: 620px) calc(100vw - 48px), 248px" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="" loading="lazy" decoding="async">
+    {{ $small := $image.Resize (printf "%dx webp" (int (math.Min 600 $image.Width))) }}
+    {{ $large := $image.Resize (printf "%dx webp" (int (math.Min 1000 $image.Width))) }}
+    <img src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} {{ $small.Width }}w{{ if gt $large.Width $small.Width }}, {{ $large.RelPermalink }} {{ $large.Width }}w{{ end }}" sizes="(max-width: 620px) calc(100vw - 48px), 248px" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="" loading="lazy" decoding="async">
   </a>
   <div class="project-card-copy">
     <h3><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h3>
     <p class="project-summary">{{ $summary }}</p>
-    <p class="project-role"><strong>My role:</strong> {{ $page.Params.role }}</p>
+    <p class="project-method"><strong>Method:</strong> {{ $page.Params.method }}</p>
     <a class="project-link" href="{{ $page.RelPermalink }}" aria-label="Explore {{ $page.Title }}">Explore the project <span aria-hidden="true">→</span></a>
   </div>
 </article>

@@ -1,10 +1,10 @@
 {
   "title": "Rainbow School",
+  "summary": "Rainbow School is a virtual school co-designed by Korean queer youth and a community organization. We examine how its design makes inclusive school futures concrete and invites visitors to reflect on their own experiences and hopes.",
+  "method": "Critical reading of a design artifact; systematic walkthrough.",
   "slug": "rainbow-school",
   "weight": 30,
   "description": "Rainbow School is a virtual school co-designed by Korean queer youth and a community organization. We examine how its design makes inclusive school futures concrete and invites visitors to reflect on their own experiences and hopes.",
-  "summary": "Rainbow School is a virtual school co-designed by Korean queer youth and a community organization. We examine how its design makes inclusive school futures concrete and invites visitors to reflect on their own experiences and hopes.",
-  "role": "Theoretical development.",
   "image": "images/rainbow-school.webp",
   "image_alt": "Overview of Rainbow School, a virtual school with classrooms, common spaces, and resources representing an inclusive school environment.",
   "featured": true,
@@ -15,10 +15,6 @@
 ## Overview
 
 Rainbow School is a virtual school built on Zep from blueprints co-designed by eight Korean queer youth and a community organization. Our research critically reads the school as a designed artifact, asking how its spaces and interactions make desired school futures tangible and open them to shared reflection.
-
-## My role
-
-I contributed to the paper’s theoretical development, examining the institutional work needed to sustain inclusive school practices and how a virtual school can communicate a community’s vision beyond organized events.
 
 ## Approach
 

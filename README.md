@@ -6,7 +6,7 @@ GitHub Pages: https://kitepretty.github.io/
 
 Cloudflare Workers: https://yuting-peng.yutingpeng2002.workers.dev/
 
-A Hugo website based on [Barks](https://github.com/timothygebhard/barks), with a bright yellow accent, a photo on the right of the introduction, a research index, and five project pages. The theme is vendored at commit `99163e05a14047757f95144edcaca492a763157c`; its MIT license is retained in `themes/barks/LICENSE`.
+A Hugo website based on [Barks](https://github.com/timothygebhard/barks), with a bright yellow accent, a photo on the right of the introduction, a research index, and six project pages. The theme is vendored at commit `99163e05a14047757f95144edcaca492a763157c`; its MIT license is retained in `themes/barks/LICENSE`.
 
 ## 修改文字
 
@@ -66,6 +66,8 @@ npm run deploy
 
 ## 图片与文件
 
-照片与项目图片由 Yuting Peng 提供。原始照片保存在本地材料文件夹；仓库仅包含网页使用的压缩图片。EHR、Yoga、BC 和 ED 插画仅作为主题封面，不作为已部署系统或研究结果。Rainbow School 图为社区设计的虚拟学校截图。只公开 CV，不公开在审论文或申请材料。
+照片与项目图片由 Yuting Peng 提供。2026-09-17 已按本人指示采用新的 BC、ED、EHR、Yoga 和无障碍酒馆封面；Rainbow School 保持原图。新封面源文件按原样存入 assets，Hugo 生成响应式 WebP，尺寸不超过原图。BC、ED 和 EHR 为主题照片，Yoga 为本人提供的图片拼图，酒馆为店面照片；不把主题照片当作研究参与者或实证结果。Rainbow School 图为社区设计的虚拟学校截图。只公开 CV，不公开在审论文或申请材料。
+
+项目卡片使用 Method，详情统一为 Overview / Approach / Findings / Manuscript。无障碍酒馆仍在分析阶段，未列具体案例。同步脚本按项目锚点关联卡片与详情，支持 Research 列表顺序和详情章节顺序不同。
 
 Barks 作者的版权声明仅适用于主题代码；个人文字、照片及研究图片的权利归各自权利人所有。

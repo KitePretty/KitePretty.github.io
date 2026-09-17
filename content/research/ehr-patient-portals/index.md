@@ -1,22 +1,18 @@
 {
   "title": "EHR Patient Portal Acceptance",
-  "slug": "ehr-patient-portals",
-  "weight": 40,
-  "description": "A survey of 883 respondents in China examining how people’s expectations of patient portals relate to their willingness to use them, and how portals might fit into everyday care.",
   "summary": "A survey of 883 respondents in China examining how people’s expectations of patient portals relate to their willingness to use them, and how portals might fit into everyday care.",
-  "role": "First author; study design, data collection, analysis, and writing.",
-  "image": "images/patient-portals.webp",
-  "image_alt": "Illustration of a person viewing electronic health records on a patient portal.",
+  "method": "Survey; regression analysis.",
+  "slug": "ehr-patient-portals",
+  "weight": 50,
+  "description": "A survey of 883 respondents in China examining how people’s expectations of patient portals relate to their willingness to use them, and how portals might fit into everyday care.",
+  "image": "images/patient-portals.jpg",
+  "image_alt": "A laptop, tablet displaying health charts, and stethoscope on a desk.",
   "featured": false
 }
 
 ## Overview
 
 What shapes people’s willingness to use a patient portal? This study examines behavioral intention to use electronic health record patient portals among 883 online survey respondents in China, focusing on expectations about the technology, social influences, and personal orientations toward health and innovation.
-
-## My role
-
-As first author, I designed the questionnaire, collected and prepared the survey data, conducted the statistical analyses, and wrote and revised the manuscript. My analysis included measurement diagnostics, primary and sensitivity models, supplementary outcomes, and exploratory moderation tests.
 
 ## Approach
 

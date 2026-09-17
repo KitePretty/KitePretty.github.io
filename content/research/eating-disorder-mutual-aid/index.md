@@ -1,12 +1,12 @@
 {
   "title": "Ordinary Tools, Organized Care",
+  "summary": "How can an eating-disorder mutual-aid organization care for both those seeking support and the peers providing it? Members’ accounts show how making room to adjust commitments and receive care themselves can make helping others meaningful to their own recovery.",
+  "method": "Constructivist grounded theory.",
   "slug": "eating-disorder-mutual-aid",
   "weight": 20,
   "description": "How can an eating-disorder mutual-aid organization care for both those seeking support and the peers providing it? Members’ accounts show how making room to adjust commitments and receive care themselves can make helping others meaningful to their own recovery.",
-  "summary": "How can an eating-disorder mutual-aid organization care for both those seeking support and the peers providing it? Members’ accounts show how making room to adjust commitments and receive care themselves can make helping others meaningful to their own recovery.",
-  "role": "First author; qualitative analysis and community collaboration.",
-  "image": "images/mutual-aid.webp",
-  "image_alt": "Illustration of eating-disorder mutual aid through personal reflection and shared podcast conversations.",
+  "image": "images/mutual-aid.jpg",
+  "image_alt": "A plate of cake beside a note reading EAT, with a person seated in the background.",
   "featured": true,
   "home_summary": "How can an eating-disorder mutual-aid organization care for both people seeking support and the peers providing it, while supporting their ongoing recovery?"
 }
@@ -14,10 +14,6 @@
 ## Overview
 
 When people with eating disorders seek peer support, those providing it may also be working through their own recovery. This project examines how a Chinese mutual-aid organization uses everyday digital tools to arrange support while caring for its contributors. It asks how organizational practices can make room for giving and receiving care as members’ recovery needs change.
-
-## My role
-
-As first author, I led the qualitative analysis, translated the Chinese podcast transcripts into English, and developed an organization map with a cofounder of the group. I also contributed to the paper’s framing, writing, and revision in collaboration with the research team.
 
 ## Approach
 

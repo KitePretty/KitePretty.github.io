@@ -1,12 +1,12 @@
 {
   "title": "Uncertainty and Support in Breast Health",
+  "summary": "This project examines how people express uncertainty and seek support in an online breast health community before treatment. I am extending the research through digital ethnography and conversations with clinicians and patients to explore the co-design of tools for care communication.",
+  "method": "Topic modeling; content analysis; statistical analysis.",
   "slug": "breast-health",
   "weight": 10,
   "description": "This project examines how people express uncertainty and seek support in an online breast health community before treatment. I am extending the research through digital ethnography and conversations with clinicians and patients to explore the co-design of tools for care communication.",
-  "summary": "This project examines how people express uncertainty and seek support in an online breast health community before treatment. I am extending the research through digital ethnography and conversations with clinicians and patients to explore the co-design of tools for care communication.",
-  "role": "Project lead and first author.",
-  "image": "images/breast-health.webp",
-  "image_alt": "Illustration of a person looking for breast health information and peer support on a phone.",
+  "image": "images/breast-health.jpg",
+  "image_alt": "A person raising one arm and touching the side of their chest.",
   "featured": true,
   "home_summary": "Understanding the questions people bring to an online breast health community before treatment and the peer support they receive."
 }
@@ -14,12 +14,6 @@
 ## Overview
 
 Questions about breast health can arise after noticing a bodily change, arranging a consultation, undergoing tests, or preparing for treatment. This project examines how people bring those questions to an online community and what kinds of peer support they receive. I initiated the project to understand these experiences and develop research directions for supporting communication and care.
-
-## My role
-
-I conceived and lead this project. I developed the research questions and study design, collected and prepared the data, conducted the LDA topic modeling, developed the codebook, carried out coding and statistical analyses, and wrote and revised the manuscript.
-
-I am now extending the project through digital ethnography and outreach to clinicians and patients, exploring how human–AI interaction (HAI) interventions could be co-designed to support need expression, care communication, and support coordination.
 
 ## Approach
 

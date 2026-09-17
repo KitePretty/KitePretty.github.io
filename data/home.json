@@ -1,3 +1,9 @@
 {
-  "contact": "I’m open to research collaborations. My manuscripts are currently under review and are not publicly posted. If you’re interested in my work, please email me; I’d be happy to share a manuscript."
+  "contact": "I’m open to research collaborations. My manuscripts are currently under review and are not publicly posted. If you’re interested in my work, please email me; I’d be happy to share a manuscript.",
+  "topics": [
+    "Human–Computer Interaction",
+    "Social Computing",
+    "Accessibility",
+    "AI for Health"
+  ]
 }
