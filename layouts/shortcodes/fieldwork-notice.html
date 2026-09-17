@@ -1,0 +1,9 @@
+{{ $image := resources.Get "images/accessible-bar-fieldwork-notices.jpg" }}
+{{ $display := $image.Resize (printf "%dx webp" (int (math.Min 1200 $image.Width))) }}
+{{ $full := $image.Resize (printf "%dx webp" $image.Width) }}
+<figure class="fieldwork-photo">
+  <a href="{{ $full.RelPermalink }}" target="_blank" rel="noopener" aria-label="View the research notice and recruitment flyer photo at full size">
+    <img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="Research notice and recruitment flyer displayed on a wall at the fieldwork site." loading="lazy" decoding="async">
+  </a>
+  <figcaption>{{ .Get "caption" }}</figcaption>
+</figure>

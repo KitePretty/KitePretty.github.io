@@ -20,6 +20,8 @@ I am particularly interested in how an inclusive environment makes room for disa
 
 The project began with one month of participant observation and informal conversations with 20 people. I am currently analyzing the material to understand how accessibility is experienced and sustained in everyday social life.
 
+{{< fieldwork-notice caption="Research notice and recruitment flyer I posted during fieldwork." >}}
+
 ## Findings
 
 Analysis is ongoing.
