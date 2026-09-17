@@ -55,5 +55,7 @@ assert 'AI for Health' in (ROOT/'index.html').read_text()
 assert 'marginalized and vulnerable populations' in (ROOT/'index.html').read_text()
 assert b'%PDF-'==(ROOT/'files/yuting-peng-cv.pdf').read_bytes()[:5]
 assert not any(p.suffix in ('.docx','.tex') for p in ROOT.rglob('*'))
-assert len(list(ROOT.rglob('*.pdf')))==1, 'Only the public CV should be published.'
+PUBLIC_PDFS={'files/yuting-peng-cv.pdf','files/peng-cscw26-womens-health-workshop.pdf'}
+assert {str(p.relative_to(ROOT)) for p in ROOT.rglob('*.pdf')} == PUBLIC_PDFS, 'Only explicitly approved PDFs should be published.'
+assert all((ROOT/p).read_bytes().startswith(b'%PDF-') for p in PUBLIC_PDFS), 'Invalid public PDF.'
 print(f'Passed: {len(EXPECTED)} pages, {count} local links, CV, image attributes, heading structure, and public-content checks.')

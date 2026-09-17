@@ -43,4 +43,4 @@ Receiving a reply does not necessarily mean receiving the kind of support a post
 
 **Status:** Accepted to the CSCW 2026 workshop [*Women’s Health as Cooperative Work: Participatory AI Across Care, Community, and Policy*](https://sites.gatech.edu/womenshealth-cscw26/).
 
-**Access:** For a copy of the manuscript, please email [ytpeng@unc.edu](mailto:ytpeng@unc.edu).
+**Access:** {{< download href="/files/peng-cscw26-womens-health-workshop.pdf" >}}Download workshop paper (PDF){{< /download >}}
