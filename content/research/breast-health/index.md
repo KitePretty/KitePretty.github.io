@@ -41,6 +41,6 @@ Receiving a reply does not necessarily mean receiving the kind of support a post
 
 **Title:** Moving Beyond Symptom Search: How a Pre-Diagnostic Reddit Community Works Through Uncertainty
 
-**Status:** Submitted to the CSCW 2026 workshop *Women’s Health as Cooperative Work: Participatory AI Across Care, Community, and Policy*.
+**Status:** Accepted to the CSCW 2026 workshop *Women’s Health as Cooperative Work: Participatory AI Across Care, Community, and Policy*.
 
 **Access:** For a copy of the manuscript, please email [ytpeng@unc.edu](mailto:ytpeng@unc.edu).
