@@ -15,12 +15,11 @@ pages = dict(re.findall(r'^<a id="([^"]+)"></a>\s*\n## Page \d+ · [^\n]+\n(.*?)
 PROJECTS = {
     'breast-health': ('breast-health.jpg', 'A person raising one arm and touching the side of their chest.'),
     'eating-disorder-mutual-aid': ('mutual-aid.jpg', 'A plate of cake beside a note reading EAT, with a person seated in the background.'),
-    'rainbow-school': ('rainbow-school.webp', 'Overview of Rainbow School, a virtual school with classrooms, common spaces, and resources representing an inclusive school environment.'),
     'accessible-bar': ('accessible-bar.jpeg', 'The entrance of Pub HandyCup, with a yellow and white striped awning and outdoor seating.'),
     'ehr-patient-portals': ('patient-portals.jpg', 'A laptop, tablet displaying health charts, and stethoscope on a desk.'),
     'yoga': ('yoga.png', 'A six-image collage showing assisted yoga poses.'),
 }
-assert set(pages) == {'home', 'research', *PROJECTS}, 'Expected Home, Research, and six project anchors.'
+assert set(pages) == {'home', 'research', *PROJECTS}, 'Expected Home, Research, and five project anchors.'
 
 def write_page(path, meta, body):
     assert not re.search(r'/Users/|[\u4e00-\u9fff]|My role', body), 'Unresolved editing notes in public copy.'
@@ -51,7 +50,7 @@ research = subsection(pages['research'], 'Research interests')
 write_page(SITE / 'content/research/_index.md', {'title': 'Research', 'description': 'Research on community support, health, accessibility, inclusive environments, and social media.'}, research)
 list_cards = cards(pages['research'], 'Projects')
 home_cards = cards(pages['home'], 'Selected Research')
-assert set(list_cards) == set(PROJECTS) and len(home_cards) == 3
+assert set(list_cards) == set(PROJECTS) and len(home_cards) == 2
 assert set(home_cards) <= set(list_cards)
 for i, (slug, card) in enumerate(list_cards.items()):
     image, alt = PROJECTS[slug]
@@ -67,7 +66,5 @@ for i, (slug, card) in enumerate(list_cards.items()):
     if slug in home_cards:
         assert home_cards[slug]['method'] == card['method']
         meta['home_summary'] = home_cards[slug]['summary']
-    if slug == 'rainbow-school':
-        meta['image_caption'] = 'Rainbow School, a virtual environment built by a community team from blueprints co-designed with eight Korean queer youth.'
     write_page(SITE / 'content/research' / slug / 'index.md', meta, body)
-print('Imported eight pages, six project methods, four research topics, and contact copy. Internal notes excluded.')
+print('Imported seven pages, five project methods, four research topics, and contact copy. Internal notes excluded.')

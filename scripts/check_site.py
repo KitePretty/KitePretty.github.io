@@ -6,7 +6,7 @@ from urllib.parse import urlparse, unquote
 import re
 
 ROOT=Path(__file__).resolve().parents[1]/'public'
-EXPECTED=['index.html','research/index.html','research/breast-health/index.html','research/eating-disorder-mutual-aid/index.html','research/rainbow-school/index.html','research/accessible-bar/index.html','research/ehr-patient-portals/index.html','research/yoga/index.html','404.html']
+EXPECTED=['index.html','research/index.html','research/breast-health/index.html','research/eating-disorder-mutual-aid/index.html','research/accessible-bar/index.html','research/ehr-patient-portals/index.html','research/yoga/index.html','404.html']
 class Page(HTMLParser):
     def __init__(self):
         super().__init__(); self.urls=[]; self.ids=set(); self.h1=0; self.canonical=None
@@ -49,8 +49,8 @@ for filename,page in parsed.items():
 for filename in EXPECTED[2:-1]:
     text=(ROOT/filename).read_text()
     assert all(f'id={x}' in text or f'id="{x}"' in text for x in ['overview','approach','findings','manuscript']),filename
-assert (ROOT/'index.html').read_text().count('<strong>Method:</strong>') == 3
-assert (ROOT/'research/index.html').read_text().count('<strong>Method:</strong>') == 6
+assert (ROOT/'index.html').read_text().count('<strong>Method:</strong>') == 2
+assert (ROOT/'research/index.html').read_text().count('<strong>Method:</strong>') == 5
 assert 'AI for Health' in (ROOT/'index.html').read_text()
 assert 'marginalized and vulnerable populations' in (ROOT/'index.html').read_text()
 assert b'%PDF-'==(ROOT/'files/yuting-peng-cv.pdf').read_bytes()[:5]

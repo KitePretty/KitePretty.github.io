@@ -3,7 +3,7 @@
   "summary": "A survey of 883 respondents in China examining how people’s expectations of patient portals relate to their willingness to use them, and how portals might fit into everyday care.",
   "method": "Survey; regression analysis.",
   "slug": "ehr-patient-portals",
-  "weight": 50,
+  "weight": 40,
   "description": "A survey of 883 respondents in China examining how people’s expectations of patient portals relate to their willingness to use them, and how portals might fit into everyday care.",
   "image": "images/patient-portals.jpg",
   "image_alt": "A laptop, tablet displaying health charts, and stethoscope on a desk.",

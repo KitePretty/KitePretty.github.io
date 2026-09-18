@@ -3,7 +3,7 @@
   "summary": "A visual content analysis of women’s yoga images on Xiaohongshu, exploring how a practice associated with well-being is presented alongside ideals of elegance and middle-class lifestyles.",
   "method": "Visual content analysis.",
   "slug": "yoga",
-  "weight": 60,
+  "weight": 50,
   "description": "A visual content analysis of women’s yoga images on Xiaohongshu, exploring how a practice associated with well-being is presented alongside ideals of elegance and middle-class lifestyles.",
   "image": "images/yoga.png",
   "image_alt": "A six-image collage showing assisted yoga poses.",

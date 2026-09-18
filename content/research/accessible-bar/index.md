@@ -3,7 +3,7 @@
   "summary": "An ongoing ethnographic study of an accessible bar in Shanghai as an urban third place for nightlife and social connection. I explore how an inclusive environment can support disabled people's sense of belonging and feeling at ease in a shared space.",
   "method": "Ethnography; participant observation; informal conversations.",
   "slug": "accessible-bar",
-  "weight": 40,
+  "weight": 30,
   "description": "An ongoing ethnographic study of an accessible bar in Shanghai as an urban third place for nightlife and social connection. I explore how an inclusive environment can support disabled people's sense of belonging and feeling at ease in a shared space.",
   "image": "images/accessible-bar.jpeg",
   "image_alt": "The entrance of Pub HandyCup, with a yellow and white striped awning and outdoor seating.",

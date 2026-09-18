@@ -6,7 +6,7 @@ GitHub Pages: https://kitepretty.github.io/
 
 Cloudflare Workers: https://yuting-peng.yutingpeng2002.workers.dev/
 
-A Hugo website based on [Barks](https://github.com/timothygebhard/barks), with a bright yellow accent, a photo on the right of the introduction, a research index, and six project pages. The theme is vendored at commit `99163e05a14047757f95144edcaca492a763157c`; its MIT license is retained in `themes/barks/LICENSE`.
+A Hugo website based on [Barks](https://github.com/timothygebhard/barks), with a bright yellow accent, a photo on the right of the introduction, a research index, and five project pages. The theme is vendored at commit `99163e05a14047757f95144edcaca492a763157c`; its MIT license is retained in `themes/barks/LICENSE`.
 
 ## 修改文字
 
@@ -71,3 +71,5 @@ npm run deploy
 项目卡片使用 Method，详情统一为 Overview / Approach / Findings / Manuscript。无障碍酒馆仍在分析阶段，未列具体案例。同步脚本按项目锚点关联卡片与详情，支持 Research 列表顺序和详情章节顺序不同。
 
 Barks 作者的版权声明仅适用于主题代码；个人文字、照片及研究图片的权利归各自权利人所有。
+
+2026-09-18：按本人要求从首页、Research 列表和详情页移除 Rainbow School。首页保留 BC 与 ED 两项，Research 保留五项；研究兴趣、其他项目内容和公开 PDF 均保持不变。
