@@ -1,7 +1,7 @@
 {
   "title": "Yoga, Body Images, and Social Media",
   "summary": "A visual content analysis of women’s yoga images on Xiaohongshu, exploring how a practice associated with well-being is presented alongside ideals of elegance and middle-class lifestyles.",
-  "method": "Visual content analysis.",
+  "method": "Quantitative content analysis; reflexive thematic analysis.",
   "slug": "yoga",
   "weight": 50,
   "description": "A visual content analysis of women’s yoga images on Xiaohongshu, exploring how a practice associated with well-being is presented alongside ideals of elegance and middle-class lifestyles.",
@@ -12,21 +12,25 @@
 
 ## Overview
 
-How is yoga represented on social media: as a practice for well-being, or as an expression of an elegant, middle-class lifestyle? This project examines images of women practicing yoga on Xiaohongshu, exploring the relationship between bodily representation, health practices, and lifestyle ideals.
+How does social media make an ideal of self-care appear both desirable and attainable? This project explores how images and narratives on Xiaohongshu construct women practicing yoga as self-care role models, connecting holistic wellness with expectations about bodies, gender, and class.
 
 ## Approach
 
-The study uses visual content analysis of manually collected images of women practicing yoga on Xiaohongshu. It approaches these images as representations of bodies and lifestyles, asking how a health practice is given social meaning through visual presentation.
+We combined quantitative content analysis of 3,586 images featuring 1,020 women with reflexive thematic analysis of textual narratives. Drawing on the motivational theory of role modeling and the self-care motivation model, we found out how these representations communicate both the desirability of yogic self-care and the possibility of achieving it.
 
 ## Findings
 
+The images presented a highly homogeneous role model: a thin, able-bodied, middle-class urban woman in her thirties.
 
+The textual analysis developed four interconnected themes. Three made yogic self-care desirable through an idealized body, physical resilience and functionality, and spiritual growth connected to worldly fulfilment. The fourth made this ideal appear attainable through willpower and the cultivation of physical, cognitive, and emotional awareness.
 
-The project considers how yoga imagery may connect the pursuit of well-being with ideals of elegance and middle-class lifestyles. This perspective draws attention to the social meanings attached to yoga, examining how images can communicate aspirations about how to live as well as how to care for the body.
+These representations tied holistic wellness to a thin, youthful, upright, and controlled body. Our analysis suggests that commercial social media can frame self-care as a gendered and class-based performance of resilience, narrowing whose bodies and ways of living count as healthy.
+
+Our findings motivate greater attention to algorithm literacy and fairness and inclusivity in platform design.
 
 ## Manuscript
 
-**Title:** Practice for Well-Being or for Middle-Class Elegance? A Content Analysis of Yoga Images on a Chinese Social Media
+**Title:** An Attainable Blueprint for Holistic Wellness: Communicating the Self-Care Yogic Role Model on Social Media
 
 **Status:** Accepted for presentation at the [112th National Communication Association Annual Convention (NCA 2026)](https://www.natcom.org/nca-112th-annual-convention/). Revised manuscript under review at [Social Media + Society](https://journals.sagepub.com/home/sms).
 

@@ -19,7 +19,7 @@ A Hugo website based on [Barks](https://github.com/timothygebhard/barks), with a
 
 当前与本地的 `Website_Copy_Editable.md` 同步。修改该主稿后，在本目录运行 `python3 scripts/sync_content.py`，只导入网页正文。内部批注、申请资料和论文全文不会导入。直接在 GitHub 修改 `content/` 后，应将改动同步回本地主稿，以免下一次导入覆盖。
 
-Yoga 的个人分工与发现目前使用根据题名整理的初稿，后续可直接更新对应项目 Markdown。稿件通过公开邮箱人工索取，不使用表单或自动发送附件。
+Yoga 的方法、样本与发现已于 2026-09-19 按本人提供的摘要及亲自修改后确认的文案更新；保留其确切用词。除已授权公开的 workshop PDF 外，稿件通过公开邮箱人工索取。
 
 ## 本地预览
 
