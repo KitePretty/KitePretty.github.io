@@ -33,7 +33,7 @@ Receiving a reply does not necessarily mean receiving the kind of support a post
 
 **Title:** From Symptom Appraisal to Treatment Preparation: Expressed Needs and Peer Support in an Online Breast Health Community
 
-**Status:** Under review at the [Journal of the American Medical Informatics Association (JAMIA)](https://academic.oup.com/jamia).
+**Status:** Under review at the [Journal of Medical Internet Research (JMIR)](https://www.jmir.org/).
 
 **Access:** For a copy of the manuscript, please email [ytpeng@unc.edu](mailto:ytpeng@unc.edu).
 
