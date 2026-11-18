@@ -33,6 +33,6 @@ Reflecting together helped members reconsider their experiences and develop reco
 
 **Title:** Ordinary Tools, Organized Care: Bounded Mutuality in Eating-Disorder Mutual Aid
 
-**Status:** Under review at [CHI 2027](https://chi2027.acm.org/).
+**Status:** Conditionally accepted at [CHI 2027](https://chi2027.acm.org/).
 
 **Access:** For a copy of the manuscript, please email [ytpeng@unc.edu](mailto:ytpeng@unc.edu).
